@@ -1,9 +1,9 @@
 const express = require('express');
 const todoRoutes = require('./routes/todo.js');
 const app = express();
-const port = 4000;
+const port = 3030;
 
-app.use(express.json());
+app.use(express.json());            // fungsinya untuk mem-parsing request body yang dikirim dalam format JSON.
 
 app.use('/todos', todoRoutes);
 app.set('view engine', 'ejs');
