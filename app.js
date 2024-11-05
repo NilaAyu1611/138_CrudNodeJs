@@ -1,7 +1,8 @@
 const express = require('express');
-const todoRoutes = require('./routes/todo.js');
+const todoRoutes = require('./routes/tododb.js');
+require('dotenv').config();
+const port = process.env.PORT;
 const app = express();
-const port = 3030;
 
 app.use(express.json());            // fungsinya untuk mem-parsing request body yang dikirim dalam format JSON.
 
