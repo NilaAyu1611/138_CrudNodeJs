@@ -13,7 +13,8 @@ const session = require('express-session');
 const authRoutes = require('./routes/authRoutes');
 const { isAuthenticated } = require('./middlewares/middleware.js');
 
-
+// Mengatur folder public sebagai folder statis
+app.use(express.static('public'));
 
 app.use(expressLayout);
 
@@ -36,6 +37,7 @@ app.use(session({
 
 app.use('/', authRoutes);
 
+
 app.get('/', isAuthenticated, (req, res) => {
     res.render('index', {
         layout: 'layouts/main-layout'
@@ -57,6 +59,9 @@ app.get('/todo-view', isAuthenticated,(req, res) => {
         });
     });
 });
+
+
+  
 
 app.use((req, res) => {
     res.status(404).send('404 - Page Not Found');

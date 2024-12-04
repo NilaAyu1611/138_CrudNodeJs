@@ -1,5 +1,115 @@
-<div class="container">
-    <h1>Welcome to the Home Page!</h1>
-    <p>This is the home page of our application.</p>
-    <a href="/contact" class="btn btn-primary">Go to Contact Page</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #08325d; /* Light text color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #e35f06, #f1fd00,#42ed09,#08ecdc);
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(198, 178, 178, 0.929);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(124, 74, 9, 0.981);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #300a0a;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .btn-primary {
+            background-color: #462f06;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #b3a244;
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        /* Footer */
+        footer {
+        text-align: center;
+        background-color: #1f1f1f; /* Footer background */
+        color: #ffff04;
+        padding: 10px 0;
+        font-size: 0.9rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        }
+
+
+        footer a {
+            color: #0df8dd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #cc790b;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1, .hero p, .btn-primary {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to My Website!</h1>
+            <p>Temukan pengalaman dan kesan Anda :)</p>
+            <a href="/contact" class="btn btn-primary">Go to Contact Page</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nila Website | <a href="/contact">Contact Us</a></p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

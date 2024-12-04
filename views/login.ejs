@@ -1,13 +1,43 @@
-<h1>Login</h1>
-<form action="/login" method="POST">
-    <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="login" class="form-card1 mt-5" >
+        <div class="form-card2">
+            <form action="/login" method="POST" class="form">
+                <p class="form-heading">Login</p>
+                <img src="images/nacw.png" alt="logo" class="form-logo">
+                <div class="form-field">
+                    <input
+                        required
+                        placeholder="Username"
+                        id="username"
+                        name="username"
+                        type="text"
+                        class="input-field"
+                    />
+                </div>
+                <div class="form-field">
+                    <input
+                        required
+                        placeholder="Password"
+                        id="password"
+                        name="password"
+                        type="password"
+                        class="input-field"
+                    />
+                </div>
+                <button type="submit" class="sendMessage-btn">Login</button>
+                <p class="form-footer">Belum punya akun? <a href="/signup" style="color: #22fa06;">Daftar di sini</a>.</p>
+            </form>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
-<p>Belum punya akun? <a href="/signup">Daftar di sini</a>.</p>
+    
+</body>
+</html>
+
